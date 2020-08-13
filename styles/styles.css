@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4 {
+  font-family: 'IBM Plex Sans', sans-serif; }
+
+h1 {
+  font-weight: 400;
+  font-size: 2em; }
+
+h2 {
+  font-weight: 400;
+  font-size: 1.8em; }
+
+h2.titulos {
+  display: none; }
+
+h3 {
+  font-weight: 500;
+  font-size: 1.2em; }
+
+p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 1em 1em 0 0;
+  line-height: 18px; }
+
+.botonverde {
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 10px 40px;
+  background: #00F3BB;
+  text-align: center;
+  color: #000;
+  text-decoration: none; }
+  .botonverde:hover {
+    color: #FFF;
+    background: linear-gradient(90deg, #00f0b8 0%, #0000fe 100%); }
+
+header {
+  display: flex;
+  width: 100%;
+  /*background-color:red;*/
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0; }
+  header .logo {
+    padding: 5px 5px; }
+  header nav {
+    padding: 5px 5px;
+    /*input:not(:checked) ~  ul{
+        transform: translateX(-100vw);
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-delay: 0.5s;
+        transition-timing-function: ease;
+      }*/ }
+    header nav input:checked ~ ul {
+      display: block;
+      /*transform: translateX(100vw);
+      transition-property: transform;
+      transition-duration: 1s;
+      transition-delay: 0.5s;
+      transition-timing-function: ease;*/ }
+    header nav input:checked ~ label i::before {
+      content: '\f00d'; }
+    header nav input {
+      display: none; }
+    header nav label {
+      box-sizing: border-box;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      user-select: none;
+      /*.fa-times{
+          
+      }*/ }
+    header nav ul {
+      position: absolute;
+      padding: 2vh 5vw;
+      background-color: #0000EC;
+      text-transform: uppercase;
+      list-style: none;
+      display: none;
+      width: 90vw;
+      top: 5vh;
+      left: 0;
+      z-index: 1; }
+      header nav ul li {
+        padding: 1.5vw; }
+        header nav ul li a {
+          color: #FFF;
+          font-family: 'IBM Plex Mono', monospace;
+          text-decoration: none;
+          font-size: 14px;
+          padding: 0;
+          font-weight: 300; }
+
+main {
+  position: relative; }
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /*height: 30vh;*/
+  margin: 0 auto;
+  padding: 10vh 0; }
+  section article {
+    margin: 0 0 0 5vw; }
+
+section:nth-child(3) {
+  padding: 10vh 0 5vh 0; }
+
+section:nth-child(4) {
+  padding: 5vh 0; }
+
+section:nth-child(2), section:nth-child(6) {
+  color: #FFF;
+  background: blue;
+  /*background: -moz-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,175,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(0,0,175,1)));
+  background: -webkit-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,175,1) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,175,1) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,175,1) 100%);*/
+  background: linear-gradient(to bottom, blue 0%, #0000af 100%); }
+
+.conoce article {
+  display: flex;
+  flex-direction: column; }
+  .conoce article .botonverde {
+    width: 30vw;
+    margin: 30px 0; }
+  .conoce article span {
+    text-decoration: line-through; }
+
+.episodios {
+  flex-direction: column;
+  /*-moz-transform: skew(0deg, -5deg);
+  -webkit-transform: skew(0deg, -5deg);
+  -o-transform: skew(0deg, -5deg);
+  -ms-transform: skew(0deg, -5deg);*/
+  transform: skew(0deg, -5deg); }
+  .episodios h2 {
+    margin: 30px 0; }
+  .episodios div {
+    transform: skew(0deg, 5deg);
+    margin: 0 0 0 5vw; }
+  .episodios article {
+    display: flex;
+    flex-direction: column;
+    margin: 0; }
+    .episodios article img {
+      width: 300px;
+      margin: 10px 0; }
+
+.venimos {
+  align-items: stretch; }
+  .venimos article {
+    position: relative; }
+    .venimos article img {
+      width: 100%;
+      margin-top: -180px; }
+  .venimos article:nth-child(2) {
+    padding: 3em 0; }
+
+.invitadas div {
+  width: 100%;
+  margin: 0; }
+  .invitadas div h2 {
+    padding: 2em 1em;
+    margin: 0 0 0 5vw; }
+.invitadas article {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0; }
+  .invitadas article img {
+    width: 100vw;
+    margin: 0;
+    padding: 0; }
+
+.temas h2 {
+  padding: 2em 1em; }
+.temas div {
+  width: 100%;
+  margin: 0; }
+  .temas div article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 0; }
+
+.novedades {
+  transform: skewY(-2.5deg);
+  transform-origin: bottom right;
+  align-items: center;
+  overflow: hidden; }
+  .novedades article {
+    transform: skewY(2.5deg);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .novedades article h2 {
+      text-align: center;
+      padding-bottom: 0.5em; }
+    .novedades article a {
+      width: 50vw; }
+
+.blanco {
+  position: relative;
+  padding: 2vh 0;
+  height: 2vh;
+  margin-top: -2px;
+  background: #FFF; }
+
+footer {
+  width: 100%;
+  height: 5vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 1em 0; }
+  footer h2 {
+    font-size: 1em; }
+  footer ul {
+    width: 70vw;
+    padding: 1.3em 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-around; }
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 36px; }
+
+  section {
+    flex-direction: row; }
+
+  header {
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFF; }
+    header .logo {
+      padding: 0 0 0 5vw; }
+    header nav {
+      padding: 0; }
+      header nav input:checked ~ ul {
+        display: flex;
+        transform: translateX(0); }
+      header nav label {
+        display: none; }
+      header nav ul {
+        position: relative;
+        top: initial;
+        right: initial;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        padding: 2vh 5vw;
+        width: 50vw;
+        background-color: transparent; }
+        header nav ul li {
+          justify-content: space-around; }
+          header nav ul li a {
+            color: #000; }
+            header nav ul li a:hover {
+              color: #00F3BB;
+              text-decoration: line-through; }
+
+  .conoce article {
+    padding-left: 5vw; }
+    .conoce article .botonverde {
+      width: 10vw; }
+
+  .episodios div {
+    margin: 50px 0; }
+    .episodios div h2 {
+      margin: 0 0 5vh 10vw; }
+    .episodios div article {
+      margin: 0;
+      flex-direction: row;
+      justify-content: space-around; }
+      .episodios div article img {
+        width: 550px;
+        margin: 30px 0; }
+
+  .venimos article {
+    margin-left: 200px; }
+    .venimos article img {
+      margin-top: -200px;
+      width: 460px; }
+  .venimos article:nth-child(2) {
+    width: 30vw; }
+    .venimos article:nth-child(2) p {
+      line-height: 22px; }
+
+  .invitadas {
+    flex-direction: row; }
+    .invitadas div h2 {
+      margin: 0 0 0 10vw; }
+    .invitadas article {
+      width: 100%;
+      flex-direction: row; }
+      .invitadas article img {
+        width: 50vw; }
+
+  .temas {
+    flex-direction: column;
+    align-items: center; }
+    .temas h2 {
+      text-align: left;
+      padding: 3em 0; }
+    .temas div {
+      display: flex;
+      justify-content: space-around;
+      width: 50vw; }
+      .temas div article {
+        margin: 0;
+        flex-direction: column;
+        align-items: center; }
+        .temas div article h3 {
+          padding: 2em 0;
+          font-size: 1em; }
+
+  .novedades {
+    flex-direction: column;
+    padding: 80px 0; }
+    .novedades article a {
+      width: 10vw; }
+
+  .blanco {
+    position: relative;
+    padding: 4vh 0;
+    height: 4vh; }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-around; }
+    footer ul {
+      width: 10vw; } }
+
+/*# sourceMappingURL=styles.css.map */
