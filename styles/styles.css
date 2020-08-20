@@ -48,21 +48,9 @@ header {
   header .logo {
     padding: 5px 5px; }
   header nav {
-    padding: 5px 5px;
-    /*input:not(:checked) ~  ul{
-        transform: translateX(-100vw);
-        transition-property: transform;
-        transition-duration: 1s;
-        transition-delay: 0.5s;
-        transition-timing-function: ease;
-      }*/ }
+    padding: 5px 5px; }
     header nav input:checked ~ ul {
-      display: block;
-      /*transform: translateX(100vw);
-      transition-property: transform;
-      transition-duration: 1s;
-      transition-delay: 0.5s;
-      transition-timing-function: ease;*/ }
+      display: block; }
     header nav input:checked ~ label i::before {
       content: '\f00d'; }
     header nav input {
@@ -74,10 +62,7 @@ header {
       height: 30px;
       line-height: 30px;
       text-align: center;
-      user-select: none;
-      /*.fa-times{
-          
-      }*/ }
+      user-select: none; }
     header nav ul {
       position: absolute;
       padding: 2vh 5vw;
@@ -121,11 +106,6 @@ section:nth-child(4) {
 section:nth-child(2), section:nth-child(6) {
   color: #FFF;
   background: blue;
-  /*background: -moz-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,175,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(0,0,175,1)));
-  background: -webkit-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,175,1) 100%);
-  background: -o-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,175,1) 100%);
-  background: -ms-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,175,1) 100%);*/
   background: linear-gradient(to bottom, blue 0%, #0000af 100%); }
 
 .conoce article {
@@ -139,10 +119,6 @@ section:nth-child(2), section:nth-child(6) {
 
 .episodios {
   flex-direction: column;
-  /*-moz-transform: skew(0deg, -5deg);
-  -webkit-transform: skew(0deg, -5deg);
-  -o-transform: skew(0deg, -5deg);
-  -ms-transform: skew(0deg, -5deg);*/
   transform: skew(0deg, -5deg); }
   .episodios h2 {
     margin: 30px 0; }
@@ -153,9 +129,12 @@ section:nth-child(2), section:nth-child(6) {
     display: flex;
     flex-direction: column;
     margin: 0; }
-    .episodios article img {
-      width: 300px;
-      margin: 10px 0; }
+  .episodios iframe {
+    width: 80vw;
+    height: 80vw;
+    border: 0;
+    margin: 10px 0;
+    transform: skew(0deg, -5deg); }
 
 .venimos {
   align-items: stretch; }
@@ -292,6 +271,9 @@ footer {
       .episodios div article img {
         width: 550px;
         margin: 30px 0; }
+  .episodios iframe {
+    width: 550px;
+    height: 160px; }
 
   .venimos article {
     margin-left: 200px; }
@@ -333,7 +315,7 @@ footer {
 
   .novedades {
     flex-direction: column;
-    padding: 80px 0; }
+    padding: 20vh 0; }
     .novedades article a {
       width: 10vw; }
 
