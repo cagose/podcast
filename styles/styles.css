@@ -125,16 +125,16 @@ section:nth-child(2), section:nth-child(6) {
   .episodios div {
     transform: skew(0deg, 5deg);
     margin: 0 0 0 5vw; }
-  .episodios article {
-    display: flex;
-    flex-direction: column;
-    margin: 0; }
-  .episodios iframe {
-    width: 80vw;
-    height: 80vw;
-    border: 0;
-    margin: 10px 0;
-    transform: skew(0deg, -5deg); }
+    .episodios div article {
+      display: flex;
+      flex-direction: column;
+      margin: 0; }
+      .episodios div article div iframe {
+        width: 80vw;
+        height: 80vw;
+        border: 0;
+        margin: 10px 0;
+        transform: skew(0deg, -5deg); }
 
 .venimos {
   align-items: stretch; }
@@ -268,12 +268,9 @@ footer {
       margin: 0;
       flex-direction: row;
       justify-content: space-around; }
-      .episodios div article img {
+      .episodios div article div iframe {
         width: 550px;
-        margin: 30px 0; }
-  .episodios iframe {
-    width: 550px;
-    height: 160px; }
+        height: 160px; }
 
   .venimos article {
     margin-left: 200px; }

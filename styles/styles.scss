@@ -143,18 +143,21 @@ section:nth-child(2),section:nth-child(6){
    div{
         transform: skew(0deg, 5deg);
         margin: 0 0 0 5vw;
-   }
+   
     article{
         display:flex;
         flex-direction: column;
         margin:0;
+        div {
+            iframe{
+                width:80vw;
+                height:80vw;
+                border:0;
+                margin: 10px 0;
+                transform: skew(0deg, -5deg);
+            }
+        }
     }
-    iframe{
-        width:80vw;
-        height:80vw;
-        border:0;
-        margin: 10px 0;
-        transform: skew(0deg, -5deg);
     }
 }
 .venimos{
@@ -323,17 +326,14 @@ footer{
             margin: 0;
             flex-direction: row;
             justify-content:space-around;
-                img{
-                width: 550px;
-                margin: 30px 0;
+                div{
+                    iframe{
+                        width:550px;
+                        height:160px;
+                    }
                 }
             }
         }
-        iframe{
-            width:550px;
-            height:160px;
-        }
-        
     }
     .venimos{
         article{
